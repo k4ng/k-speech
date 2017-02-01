@@ -47,7 +47,7 @@ volume | for set volume | 1
 rate | for set rate | 1 
 pitch | for set pitch | 1 
 auto-play | for set auto play | false
-debug-voice-support | to know the language support in browser | false
+debug-voice-support | to know the language support in browser. When it is set to "true", you can see the results in the "inspect element-> console". [open](https://github.com/k4ng/k-speech/blob/master/screen%20shot.JPG) | false
 
 
 ## Support
