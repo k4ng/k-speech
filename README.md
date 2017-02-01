@@ -26,6 +26,7 @@ a simple component "text to speech".
     rate    = "1"
     pitch   = "1"
     lang    = "id-ID"></k-speech>
+    <p>Hello, perkenalkan nama saya kang cahya. Maaf aku mah cuma newbie.</p>
 ```
 
 
