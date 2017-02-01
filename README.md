@@ -37,6 +37,12 @@ a simple component "text to speech".
 bower install --save k-speech
 ```
 
+### npm
+
+```markdown
+npm install k-speech
+```
+
 
 ## Properties
 

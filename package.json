@@ -1,0 +1,26 @@
+{
+  "name": "k-speech",
+  "version": "1.0.1",
+  "description": "a simple component text to speech.",
+  "main": "k-speech.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k4ng/k-speech.git"
+  },
+  "keywords": [
+    "audio",
+    "polymer",
+    "speech",
+    "text",
+    "web-components"
+  ],
+  "author": "k4ng <cahyadyazin@yahoo.com> (http://www.kang-cahya.com)",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/k4ng/k-speech/issues"
+  },
+  "homepage": "https://github.com/k4ng/k-speech#readme"
+}
