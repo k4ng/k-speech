@@ -1,56 +1,84 @@
-[![bower version](https://img.shields.io/bower/v/k-avatar.svg)](https://libraries.io/bower/k-avatar) 
-[![open issues](https://img.shields.io/github/issues/k4ng%2Fk-avatar.svg)](https://github.com/k4ng/k-avatar/issues) 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dyazincahya/k-avatar/blob/master/LICENSE) 
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://github.com/dyazincahya/k-avatar) 
+[![bower version](https://img.shields.io/bower/v/k-speech.svg)](https://libraries.io/bower/k-speech) 
+[![open issues](https://img.shields.io/github/issues/k4ng%2Fk-speech.svg)](https://github.com/k4ng/k-speech/issues) 
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://github.com/k4ng/k-speech) 
 
-# \<k-avatar\>
 
-Simple Element to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size.
+# \<k-speech\>
+
+a simple component "text to speech".
+
+<!--
+```
+<custom-element-demo height="300">
+  <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="k-speech.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<k-speech auto-play 
+    text    = "Hello, perkenalkan nama saya kang cahya. Maaf aku mah cuma newbie."
+    volumer = "1"
+    rate    = "1"
+    pitch   = "1"
+    lang    = "id-ID"></k-speech>
+```
+
 
 ## How to install
+
+### bower
+
 ```markdown
-bower install --save k-avatar
+bower install --save k-speech
 ```
 
-## Usage
-
-#### Simple
-```html
-<k-avatar data-name="Kang cahya"></k-avatar> <span>Kang cahya</span>
-```
-
-#### Advance
-
-```html
-<k-avatar 
-    data-name           = "Kang cahya"
-    data-height         = "100"
-    data-width          = "100"
-    data-char-alias     = "2"
-    data-text-color     = "#FFFFFF"
-    data-font-size      = "40"
-    data-font-weight    = "500"></k-avatar> <span>Kang cahya</span>
-```
 
 ## Properties
 
-Data Attribute | Description | Default Value
--------------- | ----------- | -------------
-data-name | Name of the user which the profile picture should be generated. | K4ng
-data-height | Height of the picture. | 48 (pixel)
-data-width | Width of the picture. | 48 (pixel)
-data-char-alias | Number of characherts to be shown in the picture. | 1
-data-text-color | Color of the text. | #FFFFFF (white)
-data-font-size | Font size of the character(s). | 20 (pixel)
-data-font-weight | Font weight of the character(s). | 400 
-data-border-radius | Set border-radius container character. | 0 (%)
+Attribute | Description | Default Value
+--------- | ----------- | -------------
+text | for set text | This is a simple component text to speech
+lang | for set language | english
+volume | for set volume | 1
+rate | for set rate | 1 
+pitch | for set pitch | 1 
+auto-play | for set auto play | false
+debug-voice-support | to know the language support in browser | false
+
+
+## Support
+
+### Desktop
+
+Feature | Chrome | Edge | Firefox (Gecko) | Internet Explorer | Opera | Safari (WebKit)
+------- | ------ | ---- | --------------- | ----------------- | ----- | ---------------
+Basic support | 33 | (Yes) | 49 (49) | No support | ? | 7
+
+### Mobile
+
+Feature | Android | Chrome | Edge | Firefox Mobile (Gecko) | Firefox OS | IE Phone | Opera Mobile | Safari Mobile
+------- | ------- | ------ | ---- | ---------------------- | ---------- | -------- | ------------ | -------------
+Basic support | (Yes) | (Yes) | (Yes) | No support | 2.0 | No support | No support | 7.1
+
 
 ## Change log
-You can find a list of all changes for each release in the [change log](https://github.com/k4ng/k-avatar/blob/master/CHANGELOG.md).
+
+You can find a list of all changes for each release in the [change log](https://github.com/k4ng/k-speech/blob/master/CHANGELOG.md).
+
 
 ## Contributing
-- Fork it!
-- Create your feature branch: git checkout -b my-new-feature
-- Commit your changes: git commit -m 'Add some feature'
-- Push to the branch: git push origin my-new-feature
-- Submit a pull request :D
+
+1. Fork it!
+1. Create your feature branch: git checkout -b my-new-feature
+1. Commit your changes: git commit -m 'Add some feature'
+1. Push to the branch: git push origin my-new-feature
+1. Submit a pull request :D
+
+
+## License
+
+[MIT License](https://github.com/dyazincahya/k-speech/blob/master/LICENSE) 
