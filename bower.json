@@ -1,0 +1,36 @@
+{
+    "name": "k-speech",
+    "description": "a simple text to speech component",
+    "main": "k-speech.html",
+    "version": "1.0.0",
+    "authors": [
+        "Kang Cahya"
+    ],
+    "keywords": [
+        "audio",
+        "polymer",
+        "speech",
+        "text",
+        "web-components"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/k4ng/k-speech.git"
+    },
+    "homepage": "https://github.com/k4ng/k-speech",
+    "license": "MIT License",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^1.1.0"
+    },
+    "devDependencies": {
+        "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+        "web-component-tester": "^4.0.0"
+    }
+}

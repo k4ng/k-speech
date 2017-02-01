@@ -1,0 +1,120 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="k-speech">
+    <template>
+        <style>
+            div#isSupport {
+                display: block;
+                position: fixed;
+                z-index: 1000;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin-top: 20px;
+                line-height: 24px;
+                padding: .5em 0;
+                background-color: #F44336;
+                color: #FFFFFF;
+            }
+        </style>
+
+        <div id="isSupport"></div>
+
+    </template>
+    <script>
+        Polymer({
+            is: 'k-speech',
+            properties: 
+            {
+                text: {
+                    type: String,
+                    value: "This is a simple component text to speech"
+                },
+                lang: {
+                    type: String,
+                    value: ''
+                },
+                volume: {
+                    type: Number,
+                    value: 1
+                },
+                rate: {
+                    type: Number,
+                    value: 1
+                },
+                pitch: {
+                    type: Number,
+                    value: 1
+                },
+                autoPlay: {
+                    type: Boolean,
+                    value: false
+                },
+                debugVoiceSupport: {
+                    type: Boolean,
+                    value: false
+                }
+            },
+
+            __debugVoiceSupport: function(){
+                console.log("/*****************************************************/");
+                console.log("/** This is a voice support. Please copy Lang Code! **/");
+                console.log("/*****************************************************/");
+                function loadVoices() 
+                {
+                    var voices = speechSynthesis.getVoices(); 
+                    voices.forEach(function(voice, i) {
+                        if(voice.lang.length != 0)
+                        {
+                            console.log("Lang Code : " + voice.lang + " (" + voice.name + ")");
+                        }
+                    });
+                    console.log(" ");
+                }
+
+                // Execute loadVoices.
+                loadVoices();
+
+                // Chrome loads voices asynchronously.
+                window.speechSynthesis.onvoiceschanged = function(e) {
+                    loadVoices();
+                };
+            },
+
+            __configSpeech: function(text){
+                var speech = new SpeechSynthesisUtterance(text);
+                var voices = window.speechSynthesis.getVoices();
+                speech.default = false;
+                speech.voice = voices.filter(function(voice) { 
+                    if(voice.lang == this.lang){
+                        return voice.name;
+                    }
+                })[0];
+                speech.lang = this.lang;
+                window.speechSynthesis.speak(speech);
+            },
+
+            ready: function(){
+                if ('speechSynthesis' in window) {
+                    this.$.isSupport.innerHTML = 'Your browser <strong>supports</strong> speech synthesis.';
+                    this.$.isSupport.style.display = 'none';
+
+                    if(this.autoPlay === true){
+                        if (this.text.length > 0) {
+                            this.__configSpeech(this.text);
+                        }
+                    }
+
+                    if(this.debugVoiceSupport === true){
+                        this.__debugVoiceSupport();
+                    }
+                } else {
+                    this.$.isSupport.innerHTML = 'Sorry your browser <strong>does not support</strong> speech synthesis.<br> <i>Please update your browser to the latest version.</i>';
+                    this.$.isSupport.classList.add('not-supported');
+                }
+
+           }
+        });
+    </script>
+</dom-module>
