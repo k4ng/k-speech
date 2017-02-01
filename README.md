@@ -22,7 +22,7 @@ a simple component "text to speech".
 ```html
 <k-speech auto-play 
     text    = "Hello, my name is kang, I am a newbie."
-    volumer = "1"
+    volume  = "1"
     rate    = "1"
     pitch   = "1"></k-speech>
     <p>Hello, my name is kang, I am a newbie.</p>
