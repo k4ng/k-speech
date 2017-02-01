@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.1] - 2017-02-01
 
+## Add
+- Register to npm and bower
+
 ## Change
 - change text live demo in README.md
 
