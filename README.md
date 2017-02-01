@@ -21,12 +21,11 @@ a simple component "text to speech".
 -->
 ```html
 <k-speech auto-play 
-    text    = "Hello, perkenalkan nama saya kang cahya. Maaf aku mah cuma newbie."
+    text    = "Hello, my name is kang, I am a newbie."
     volumer = "1"
     rate    = "1"
-    pitch   = "1"
-    lang    = "id-ID"></k-speech>
-    <p>Hello, perkenalkan nama saya kang cahya. Maaf aku mah cuma newbie.</p>
+    pitch   = "1"></k-speech>
+    <p>Hello, my name is kang, I am a newbie.</p>
 ```
 
 
