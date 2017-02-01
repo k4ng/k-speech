@@ -1,6 +1,6 @@
 {
     "name": "k-speech",
-    "description": "a simple text to speech component",
+    "description": "a simple component text to speech",
     "main": "k-speech.html",
     "version": "1.0.0",
     "authors": [
