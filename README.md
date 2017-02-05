@@ -49,7 +49,7 @@ npm install k-speech
 
 Attribute | Description | Default Value
 --------- | ----------- | -------------
-text | for set text | This is a simple component text to speech
+text | for set text, limit 200-300 character. | This is a simple component text to speech
 lang | for set language | english
 volume | for set volume | 1
 rate | for set rate | 1 
